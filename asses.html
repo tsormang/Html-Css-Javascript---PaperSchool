@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Assignments</title>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+
+    <link href="CSSstyles/indexStyle.css" rel="stylesheet" />
+    <link href="CSSstyles/AssStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="main-container">
+
+        <!--this contains the tip pop up for the footer suprise-->
+        <div class="hiddenclues">
+            <div id="questionGlobe"><img src="Images/next.png" alt="tip" /></div>
+            <div id="tipDialogue"><img src="Images/tipbubble.png" alt="tip" /></div>
+        </div>
+
+        <!--this contains the navigation bar on top-->
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    Paper School
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Main</a>
+                <a href="courses.html">Courses</a>
+                <a href="students.html">Students</a>
+                <a href="trainers.html">Trainers</a>
+                <a href="asses.html">Assignments</a>
+                <a>|</a>
+                <a href="trainersPERcourse.html">Combined tables</a>
+            </div>
+        </div>
+
+        <!--this contains the page title-->
+        <header class="nameTagCourses">
+            <h1>PAPER SCHOOL</h1>
+            <h3>Assignments</h3>
+        </header>
+
+        <!--this contains the Main Parallax Image Theme for each page-->
+        <div id="parallax-container">
+            <div><img class="image8" src="Images/SL_8.png" /></div>
+            <div><img class="image7" src="Images/SL_5.png" /></div>
+            <div><img class="image6" src="Images/CL_3.png" /></div>
+            <div><img src="Images/ass4.png" /></div>
+            <div><img src="Images/ass3.png" /></div>
+            <div><img src="Images/ass2.png" /></div>
+            <div><img src="Images/ass1.png" /></div>
+            <div>
+                <img class="image0" src="Images/ass0.png" />
+                <img class="image_1" src="Images/paper.jpg" />
+                <img class="image_2" src="Images/paper.jpg" />
+                <img class="image_3" src="Images/paper.jpg" />
+                <img class="image_4" src="Images/paper.jpg" />
+
+            </div>
+        </div>
+
+        <!--this contains the main table-->
+        <div class="table-users">
+            <div id="buttonBar">
+                <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Filter Assignments.." title="Assignments">
+                <button id="btnAddA">Add Assignment</button>
+            </div>
+
+            <table id="myTable" cellspacing="0">
+
+                <caption> Table of Courses </caption>
+
+                <thead>
+                    <tr id="stable1">
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Subscription Date</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr id="1">
+                        <td>1</td>
+                        <td>Origami Folding</td>
+                        <td>Make Little Cranes</td>
+                        <td>02/20/2020</td>
+                        <td><img class='btnDelete' src='Images/delete.png' /> <img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                    <tr id="2">
+                        <td>2</td>
+                        <td>Mache Intro</td>
+                        <td>Beginner</td>
+                        <td>02/10/2020</td>
+                        <td><img class='btnDelete' src='Images/delete.png' /> <img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr id="stable2">
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Subscription Date</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!--this footer might or not have an special effect-->
+    <footer>
+        <div>
+            <p id="footerClick"> Hey, go away from here... </p>
+            <img src="Images/footerImage.png" />
+        </div>
+        <div id="pandora"><img src="Images/pandoraBox.png" alt="pandora" /></div>
+    </footer>
+
+    <!--this is the MODAL for ADD-->
+    <div id="ModalForm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Input Form</h2>
+            </div>
+
+            <div class="modal-body">
+                <form action="/" method="get">
+
+                    <fieldset>
+                        <label for="Title">
+                            Title
+                            <input type="text" name="Title" value="" id="Title" placeholder="Assignment Title" required>
+                        </label>
+                        <br>
+                        <label for="Description">
+                            Description
+                            <input type="text" name="Description" value="" id="Description" placeholder="Assignment Description" required>
+                        </label>
+                        <br>
+                        <label for="Subscription">
+                            Subscription Date
+                            <input type="date" name="Subscription" value="" id="Subscription" placeholder="Subscription Date" required>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <input id="Submitbtn" name="Submit" value="Submit" type="submit">
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--this is the MODAL for EDIT-->
+    <div id="ModalFormEdit">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Edit Form</h2>
+            </div>
+
+            <div class="modal-body">
+                <form action="/" method="get">
+
+                    <fieldset>
+                        <span id="rowID"> ID: </span>
+                    </fieldset>
+                    <fieldset>
+                        <label for="currTitle">
+                            Title
+                            <input type="text" name="Title" value="" id="currTitle" placeholder="Assignment Title" required>
+                        </label>
+                        <br>
+                        <label for="currDescription">
+                            Description
+                            <input type="text" name="Description" value="" id="currDescription" placeholder="Assignment Description" required>
+                        </label>
+                        <br>
+                        <label for="currSubscription">
+                            Subscription Date
+                            <input type="date" name="Subscription" value="" id="currSubscription" placeholder="Subscription Date" required>
+                        </label>
+                    </fieldset>
+                    <input type="button" class="btnSaveEdit" name="Submit" value="">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--JS code Section-->
+    <script src="JScode/main_asses.js"></script>
+    <script src="JScode/main.js"></script>
+    <script src="JScode/indexspecific.js"></script>
+    <script src="Extras/mystery.js"></script>
+
+</body>
+</html>

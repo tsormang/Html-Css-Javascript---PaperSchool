@@ -1,0 +1,322 @@
+﻿
+
+/*#region ADD BTN*/
+#btnAddA {
+    background-image: url('../Images/footerImage.png');
+    background-position: left top, center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 400px;
+    float: right;
+    font-size: 16px;
+    padding: 12px 20px 12px 60px;
+    border: 1px solid #ddd;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 22px;
+    border-bottom: 1px solid #327a81;
+    border-left: 1px solid #327a81;
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+    #btnAddC:hover {
+        border-right: 8px solid #327a81;
+    }
+/*#endregion ADD BTN*/
+
+/*#region MODAL*/
+
+/*#region Animation */
+@-webkit-keyframes slideIn {
+    from {
+        bottom: 0px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@keyframes slideIn {
+    from {
+        bottom: 0px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*#endregion Animation*/
+
+#ModalForm {
+    display: none;
+}
+
+#ModalFormEdit {
+    display: none;
+}
+
+.modal-content {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    margin: 0 auto;
+    z-index: 1;
+    width: 80%;
+    max-width: 1200px;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+}
+
+.modal-header {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    background-image: url('../Images/footerImage.png');
+    background-position: left top, center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.modal-body {
+    position: absolute;
+    top: 36px;
+    width: 100%;
+    padding: 10px;
+    background-image: url('../Images/paperpatch2.jpg');
+    background-position: left top, center top;
+    background-size: auto;
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(233, 223, 223, 0.6);
+    border-bottom: 1px solid rgba(233, 223, 223, 0.6);
+}
+
+
+/*#region CLOSE BTN*/
+
+.close {
+    z-index: 2;
+    margin-top: -8px;
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #7fccce;
+        font-size: 46px;
+        margin-top: -12px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+/*#endregion CLOSE BTN*/
+
+
+/*#endregion MODAL*/
+
+/*#region FORM*/
+
+form {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    z-index: 4;
+    width: 90%;
+}
+
+fieldset {
+    position: relative;
+    margin-top: 10px;
+}
+
+fieldset {
+    display: block;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding: 18px;
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0.4);
+    background-image: url('../Images/paper.jpg');
+    border-right: 1px solid rgba(233, 223, 223, 0.6);
+    border-bottom: 1px solid rgba(233, 223, 223, 0.6);
+}
+
+
+form fieldset input {
+    margin-top: 10px;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+/*#region INPUT RADIO*/
+
+/* Customize the label (the container) */
+.container {
+    position: relative;
+    padding-left: 40px;
+    margin-top: 20px;
+    margin-right: 60px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    /* Hide the browser's default checkbox */
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: rgba(245, 237, 237, 0.2);
+    border: 1px solid #327a81;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-image: url('Images/footerImage.png');
+    background-position: left top, center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*#endregion INPUT RADIO*/
+
+#Submitbtn {
+    background-image: url('../Images/footerImage.png');
+    background-position: left top, center top;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+    #Submitbtn:hover {
+        border-right: 8px solid #327a81;
+    }
+
+
+.error {
+    float: right;
+    color: red;
+    border-right: 4px solid red;
+}
+
+.btnSave {
+    position: relative;
+    float: right;
+    padding: 20px;
+}
+
+    .btnSave:hover {
+        border-right: 8px solid #327a81;
+    }
+
+
+.btnSaveEdit {
+    background-color: rgba(245, 237, 237, 0);
+    box-shadow: -3px -3px 3px rgba(0, 0, 0, 0);
+    background-image: url('../Images/save.png');
+    position: relative;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 80px;
+    height: 70px;
+    font-size: 1px;
+    border: none;
+}
+
+    .btnSaveEdit:hover {
+        border-right: 8px solid #327a81;
+    }
+
+/*#endregion FORM*/
+
+/*#region DATE_PICKER*/
+
+/* datepicker css */
+
+[type="date"] {
+    background: rgba(245, 237, 237, 0.8) url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat;
+}
+
+    [type="date"]::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    [type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+
+
+/*#endregion DATE_PICKER*/
+

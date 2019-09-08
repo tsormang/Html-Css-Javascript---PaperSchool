@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Students</title>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+
+    <link href="CSSstyles/indexStyle.css" rel="stylesheet" />
+    <link href="CSSstyles/StudentStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="main-container">
+        <!--this contains the tip pop up for the footer suprise-->
+        <div class="hiddenclues">
+            <div id="questionGlobe"><img src="Images/next.png" alt="tip" /></div>
+            <div id="tipDialogue"><img src="Images/tipbubble.png" alt="tip" /></div>
+        </div>
+
+        <!--this contains the navigation bar on top-->
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    Paper School
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Main</a>
+                <a href="courses.html">Courses</a>
+                <a href="students.html">Students</a>
+                <a href="trainers.html">Trainers</a>
+                <a href="asses.html">Assignments</a>
+                <a>|</a>
+                <a href="trainersPERcourse.html">Combined tables</a>
+            </div>
+        </div>
+
+        <!--this contains the page title-->
+        <header class="nameTagCourses">
+            <h1>PAPER SCHOOL</h1>
+            <h3>Students</h3>
+        </header>
+
+        <!--this contains the Main Parallax Image Theme for each page-->
+        <div id="parallax-container">
+            <div><img class="image9" src="Images/SL_9.png" /></div>
+            <div><img class="image8" src="Images/SL_8.png" /></div>
+            <div><img class="image7" src="Images/SL_7.png" /></div>
+            <div><img class="image3" src="Images/AllPeople3.png" /></div>
+            <div><img class="image2" src="Images/AllPeople2.png" /></div>
+            <div><img class="image1" src="Images/AllPeople1.png" /></div>
+            <div>
+                <img class="image0" src="Images/AllPeople0.png" />
+                <img class="image_1" src="Images/paper.jpg" />
+                <img class="image_2" src="Images/paper.jpg" />
+                <img class="image_3" src="Images/paper.jpg" />
+                <img class="image_4" src="Images/paper.jpg" />
+
+            </div>
+        </div>
+
+        <!--this contains the main table-->
+        <div class="table-users">
+            <div id="buttonBar">
+                <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Filter Students.." title="Students">
+                <button id="btnAddS">Add Student</button>
+            </div>
+
+            <table id="myTable" cellspacing="0">
+
+                <caption> Table of Students </caption>
+
+                <thead>
+                    <tr id="stable1">
+                        <th>ID</th>
+                        <th>Avatar</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Birth Date</th>
+                        <th>Tuition Fees</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr id="1">
+                        <td>1</td>
+                        <td><div class="picFrame"><img class='avatar' src='Images/people01.png' id="female" /></div></td>
+                        <td>Afroditi</td>
+                        <td>Mpeimp</td>
+                        <td>01/01/1988</td>
+                        <td>2000</td>
+                        <td><img class='btnDelete' src='Images/delete.png' /> <img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                    <tr id="2">
+                        <td>2</td>
+                        <td><div class="picFrame"><img class='avatar' src='Images/people11.png' id="male" /></div></td>
+                        <td>Mpampis</td>
+                        <td>Sougias</td>
+                        <td>01/10/1978</td>
+                        <td>2500</td>
+                        <td><img class='btnDelete' src='Images/delete.png' /> <img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr id="stable2">
+                        <th>ID</th>
+                        <th>Avatar</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Birth Date</th>
+                        <th>Tuition Fees</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </div>
+    </div>
+
+    <!--this footer might or not have an special effect-->
+    <footer>
+        <div>
+            <p id="footerClick">Make it Snow</p>
+            <img src="Images/footerImage.png" />
+            <div id="snowpile1"><img src="Images/snow1.png" alt="snow" /></div>
+            <div id="snowpile2"><img src="Images/snow2.png" alt="snow" /></div>
+            <div id="snowpile3"><img src="Images/snow1.png" alt="snow" /></div>
+            <div id="snowpile4"><img src="Images/snow2.png" alt="snow" /></div>
+        </div>
+    </footer>
+
+    <!--this is the MODAL for ADD-->
+    <div id="ModalForm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Input Form</h2>
+            </div>
+
+            <div class="modal-body">
+                <form action="/" method="get">
+
+
+                    <fieldset>
+                        <label class="container" for="Mrs">
+                            Mrs
+                            <input type="radio" name="sex" value="Mrs" id="Mrs">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container" for="Mr">
+                            Mr
+                            <input type="radio" name="sex" value="Mr" id="Mr">
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </fieldset>
+                    <fieldset>
+                        <div id="leftSide">
+                            <img id="toBeChanged" src='Images/people01.png' value="Images/people01.png" alt="Avatar" />
+                        </div>
+
+                        <div id="rightSide">
+                            <label for="FirstName">
+                                First Name
+                                <input type="text" name="FirstName" value="" id="FirstName" placeholder="First Name" required>
+                            </label>
+                            <br>
+                            <label for="LastName">
+                                Last Name
+                                <input type="text" name="LastName" value="" id="LastName" placeholder="Last Name" required>
+                            </label>
+                            <br>
+                            <label for="BirthDate">
+                                Birth Date
+                                <input type="date" name="BirthDate" value="" id="BirthDate" placeholder="Birth Date" required>
+                            </label>
+                            <br>
+                            <label for="TuitionFees">
+                                Tuition Fees
+                                <input type="text" name="TuitionFees" value="" id="TuitionFees" placeholder="Tuition Fees" required>
+                            </label>
+                            <br>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <input id="Submitbtn" name="Submit" value="Submit" type="submit">
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--this is the MODAL for EDIT-->
+    <div id="ModalFormEdit">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Edit Form</h2>
+            </div>
+
+            <div class="modal-body">
+                <form action="/" method="get">
+
+                    <fieldset>
+                        <span id="rowID"> ID: </span>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="currFirstName">
+                            First Name
+                            <input type="text" name="FirstName" value="" id="currFirstName" placeholder="First Name" required>
+                        </label>
+                        <br>
+                        <label for="currLastName">
+                            Last Name
+                            <input type="text" name="LastName" value="" id="currLastName" placeholder="Last Name" required>
+                        </label>
+                        <br>
+                        <label for="currBirthDate">
+                            Birth Date
+                            <input type="date" name="BirthDate" value="" id="currBirthDate" placeholder="Birth Date" required>
+                        </label>
+                        <br>
+                        <label for="currTuitionFees">
+                            Tuition Fees
+                            <input type="text" name="TuitionFees" value="" id="currTuitionFees" placeholder="Tuition Fees" required>
+                        </label>
+                        <br>
+                    </fieldset>
+                    <input type="button" class="btnSaveEdit" name="Submit" value="">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--this is the MODAL for the Avatars-->
+    <div id="AvatarModal">
+
+        <div class="Carousel-header">
+            <span class="close">&times;</span>
+            <h2>Choose Avatar for Mr.</h2>
+        </div>
+
+        <div class="Carousel-Body">
+            <div class="AvatarMale">
+                <ol>
+                    <li><img src="Images/people03.png" alt="" /></li>
+                    <li><img src="Images/people05.png" alt="" /></li>
+                    <li><img src="Images/people06.png" alt="" /></li>
+                    <li><img src="Images/people11.png" alt="" /></li>
+                    <li><img src="Images/people13.png" alt="" /></li>
+                    <li><img src="Images/people14.png" alt="" /></li>
+                    <li><img src="Images/people15.png" alt="" /></li>
+                    <li><img src="Images/people17.png" alt="" /></li>
+                </ol>
+            </div>
+            <div class="AvatarFemale">
+                <ol>
+                    <li><img src="Images/people01.png" alt="" /></li>
+                    <li><img src="Images/people02.png" alt="" /></li>
+                    <li><img src="Images/people04.png" alt="" /></li>
+                    <li><img src="Images/people07.png" alt="" /></li>
+                    <li><img src="Images/people08.png" alt="" /></li>
+                    <li><img src="Images/people09.png" alt="" /></li>
+                    <li><img src="Images/people10.png" alt="" /></li>
+                    <li><img src="Images/people12.png" alt="" /></li>
+                    <li><img src="Images/people16.png" alt="" /></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!--JS code Section-->
+    <script src="JScode/main.js"></script>
+    <script src="JScode/indexspecific.js"></script>
+    <script src="Extras/snow.js"></script>
+    <script src="JScode/main_students.js"></script>
+
+</body>
+</html>

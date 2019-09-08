@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Courses</title>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/jquery.validate.js"></script>
+    <link href="CSSstyles/indexStyle.css" rel="stylesheet" />
+    <link href="CSSstyles/CoursesStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="main-container">
+
+        <!--this contains the navigation bar on top-->
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    Paper School
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Main</a>
+                <a href="courses.html">Courses</a>
+                <a href="students.html">Students</a>
+                <a href="trainers.html">Trainers</a>
+                <a href="asses.html">Assignments</a>
+                <a>|</a>
+                <a href="trainersPERcourse.html">Combined tables</a>
+            </div>
+        </div>
+
+        <!--this contains the page title-->
+        <header class="nameTagCourses">
+            <h1>PAPER SCHOOL</h1>
+            <h3>Courses</h3>
+        </header>
+
+        <!--this contains the Main Parallax Image Theme for each page-->
+        <div id="parallax-container">
+            <div><img class="image8" src="Images/SL_8.png" /></div>
+            <div><img class="image7" src="Images/SL_7.png" /></div>
+            <div><img class="image6" src="Images/SL_6.png" /></div>
+            <div><img class="image5" src="Images/SL_5.png" /></div>
+            <div><img class="image4" src="Images/SL_4.png" /></div>
+            <div><img class="image3" src="Images/CL_3.png" /></div>
+            <div><img class="image2" src="Images/CL_2.png" /></div>
+            <div>
+                <img class="image0" src="Images/CL_0.png" />
+                <img class="image_1" src="Images/paper.jpg" />
+                <img class="image_2" src="Images/paper.jpg" />
+                <img class="image_3" src="Images/paper.jpg" />
+                <img class="image_4" src="Images/paper.jpg" />
+
+            </div>
+        </div>
+
+        <!--this contains the main table-->
+        <div class="table-users">
+            <div id="buttonBar">
+                <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Filter Courses.." title="Course">
+                <button id="btnAddC">Add Course</button>
+            </div>
+
+            <table id="myTable" cellspacing="0">
+
+                <caption> Table of Courses </caption>
+
+                <thead>
+                    <tr id="stable1">
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Stream</th>
+                        <th>Type</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr id="1">
+                        <td>1</td>
+                        <td>Origami</td>
+                        <td>Full Time</td>
+                        <td>Paper Class</td>
+                        <td>01/01/2020</td>
+                        <td>02/02/2020</td>
+                        <td><img class='btnDelete' src='Images/delete.png' /> <img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                    <tr id="2">
+                        <td>2</td>
+                        <td>Paper Mache</td>
+                        <td>Part Time</td>
+                        <td>Paper Class</td>
+                        <td>01/10/2020</td>
+                        <td>02/10/2020</td>
+                        <td><img class='btnDelete' src='Images/delete.png' /> <img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr id="stable2">
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Stream</th>
+                        <th>Type</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!--this footer might or not have an special effect-->
+    <footer>
+        <div>
+            <p>this footer has no suprises</p>
+            <img src="Images/footerImage.png" />
+        </div>
+    </footer>
+
+    <!--this is the MODAL for ADD-->
+    <div id="ModalForm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Input Form</h2>
+            </div>
+
+            <div class="modal-body">
+                <form id="form" method="post" action="">
+
+                    <fieldset>
+                        <label for="Title">
+                            Title
+                            <input type="text" name="Title" value="" id="Title" placeholder="Course Type" required autofocus>
+                        </label>
+                        <br>
+                        <label for="Stream">
+                            Stream
+                            <input type="text" name="Stream" value="" id="Stream" placeholder="Course Stream" required autofocus>
+                        </label>
+                        <br>
+                        <label for="Type">
+                            Type
+                            <input type="text" name="Type" value="" id="Type" placeholder="Course Type" required autofocus>
+                        </label>
+                        <br>
+                        <label for="StartDate">
+                            Starting Date
+                            <input type="date" name="StartDate" value="" id="StartDate" placeholder="Starting date" required>
+                        </label>
+                        <br>
+                        <label for="EndDate">
+                            Ending Date
+                            <input type="date" name="EndDate" value="" id="EndDate" placeholder="Ending Date" required>
+                        </label>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <input id="Submitbtn" name="Submit" value="Submit" type="submit">
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--this is the MODAL for EDIT-->
+    <div id="ModalFormEdit">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Edit Form</h2>
+            </div>
+
+            <div class="modal-body">
+                <form action="/" method="get">
+
+                    <fieldset>
+                        <span id="rowID"> ID: </span>
+                    </fieldset>
+
+
+                    <fieldset>
+                        <label for="currTitle">
+                            Title
+                            <input type="text" value="" id="currTitle" required autofocus>
+                        </label>
+                        <br>
+                        <label for="currStream">
+                            Stream
+                            <input type="text" value="" id="currStream" required autofocus>
+                        </label>
+                        <br>
+                        <label for="currType">
+                            Type
+                            <input type="text" value="" id="currType" required autofocus>
+                        </label>
+                        <br>
+                        <label for="currStartDate">
+                            Starting Date
+                            <input type="date" value="" id="currStartDate datepicker" required>
+                        </label>
+                        <br>
+                        <label for="currEndDate">
+                            Ending Date
+                            <input type="date" value="" id="currEndDate datepicker" required>
+                        </label>
+                    </fieldset>
+                    <input type="button" class="btnSaveEdit" name="Submit" value="">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--JS code Section-->
+    <script src="JScode/main_courses.js"></script>
+    <script src="JScode/main.js"></script>
+    <script src="JScode/formvalidation.js"></script>
+
+</body>
+</html>

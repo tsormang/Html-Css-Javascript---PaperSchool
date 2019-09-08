@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Trainers</title>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/jquery.validate.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+
+    <link href="CSSstyles/indexStyle.css" rel="stylesheet" />
+    <link href="CSSstyles/TrainerStyle.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div class="main-container">
+
+        <!--this contains the tip pop up for the footer suprise-->
+        <div class="hiddenclues">
+            <div id="questionGlobe"><img src="Images/next.png" alt="tip" /></div>
+            <div id="tipDialogue"><img src="Images/tipbubble.png" alt="tip" /></div>
+        </div>
+
+        <!--this is for the RAIN special effect-->
+        <section class="rain"></section>
+
+        <!--this contains the navigation bar on top-->
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    Paper School
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Main</a>
+                <a href="courses.html">Courses</a>
+                <a href="students.html">Students</a>
+                <a href="trainers.html">Trainers</a>
+                <a href="asses.html">Assignments</a>
+                <a>|</a>
+                <a href="trainersPERcourse.html">Combined tables</a>
+            </div>
+        </div>
+
+        <!--this contains the page title-->
+        <header class="nameTagCourses">
+            <h1>PAPER SCHOOL</h1>
+            <h3>Trainers</h3>
+        </header>
+
+        <!--this contains the Main Parallax Image Theme for each page-->
+        <div id="parallax-container">
+            <div><img class="image9" src="Images/SL_9.png" /></div>
+            <div><img class="image8" src="Images/SL_8.png" /></div>
+            <div><img class="image7" src="Images/SL_7.png" /></div>
+            <div><img class="image3" src="Images/AllPeople3.png" /></div>
+            <div><img class="image2" src="Images/AllPeople2.png" /></div>
+            <div><img class="image1" src="Images/AllPeople1.png" /></div>
+            <div>
+                <img class="image0" src="Images/AllPeople0.png" />
+                <img class="image_1" src="Images/paper.jpg" />
+                <img class="image_2" src="Images/paper.jpg" />
+                <img class="image_3" src="Images/paper.jpg" />
+                <img class="image_4" src="Images/paper.jpg" />
+
+            </div>
+        </div>
+
+        <!--this contains the main table-->
+        <div class="table-users">
+            <div id="buttonBar">
+                <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Filter Trainers.." title="Trainers">
+                <button id="btnAddT">Add Trainer</button>
+            </div>
+
+            <table id="myTable" cellspacing="0">
+
+                <caption> Table of Trainers </caption>
+
+                <thead>
+                    <tr id="stable1">
+                        <th>ID</th>
+                        <th>Avatar</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Subject</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr id="1">
+                        <td>1</td>
+                        <td><div class="picFrame"><img class='avatar' src='Images/people10.png' id="female" /></div></td>
+                        <td>Xristina</td>
+                        <td>Asxetoula</td>
+                        <td>Origami</td>
+                        <td><img class='btnDelete' src='Images/delete.png' /> <img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                    <tr id="2">
+                        <td>2</td>
+                        <td><div class="picFrame"><img class='avatar' src='Images/people15.png' id="male" /></div></td>
+                        <td>Tasos</td>
+                        <td>Maxairas</td>
+                        <td>Paper Cuts</td>
+                        <td><img class='btnDelete' src='Images/delete.png' /> <img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr id="stable2">
+                        <th>ID</th>
+                        <th>Avatar</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Subject</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </div>
+    </div>
+
+    <!--this footer might or not have an special effect-->
+    <footer>
+        <div>
+            <p id="footerClick">Make it Rain</p>
+            <div id="waterpile1"></div>
+            <div id="waterpile2"></div>
+            <div id="waterpile3"></div>
+            <div id="waterpile4"></div>
+            <img src="Images/footerImage.png" />
+        </div>
+    </footer>
+
+    <!--this is the MODAL for ADD-->
+    <div id="ModalForm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Input Form</h2>
+            </div>
+
+            <div class="modal-body">
+                <form action="/" method="get">
+
+
+                    <fieldset>
+                        <label class="container" for="Mrs">
+                            Mrs
+                            <input type="radio" name="sex" value="Mrs" id="Mrs">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container" for="Mr">
+                            Mr
+                            <input type="radio" name="sex" value="Mr" id="Mr">
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </fieldset>
+                    <fieldset>
+                        <div id="leftSide">
+                            <img id="toBeChanged" src='Images/people01.png' value="Images/people01.png" alt="Avatar" />
+                        </div>
+                        <div id="rightSide">
+                            <label for="FirstName">
+                                First Name
+                                <input type="text" name="FirstName" value="" id="FirstName" placeholder="First Name" required>
+                            </label>
+                            <br>
+                            <label for="LastName">
+                                Last Name
+                                <input type="text" name="LastName" value="" id="LastName" placeholder="Last Name" required>
+                            </label>
+                            <br>
+                            <label for="Subject">
+                                Subject
+                                <input type="text" name="Subject" value="" id="Subject" placeholder="Subject" required>
+                            </label>
+                            <br>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <input id="Submitbtn" name="Submit" value="Submit" type="submit">
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--this is the MODAL for EDIT-->
+    <div id="ModalFormEdit">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Edit Form</h2>
+            </div>
+
+            <div class="modal-body">
+                <form action="/" method="get">
+
+                    <fieldset>
+                        <span id="rowID"> ID: </span>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="currFirstName">
+                            First Name
+                            <input type="text" name="FirstName" value="" id="currFirstName" placeholder="First Name" required>
+                        </label>
+                        <br>
+                        <label for="currLastName">
+                            Last Name
+                            <input type="text" name="LastName" value="" id="currLastName" placeholder="Last Name" required>
+                        </label>
+                        <br>
+                        <label for="currSubject">
+                            Subject
+                            <input type="text" name="Subject" value="" id="currSubject" placeholder="Subject" required>
+                        </label>
+                        <br>
+
+                    </fieldset>
+                    <input type="button" class="btnSaveEdit" name="Submit" value="">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--this is the MODAL for the Avatars-->
+    <div id="AvatarModal">
+
+        <div class="Carousel-header">
+            <span class="close">&times;</span>
+            <h2>Choose Avatar for Mr.</h2>
+        </div>
+
+        <div class="Carousel-Body">
+            <div class="AvatarMale">
+                <ol>
+                    <li><img src="Images/people03.png" alt="" /></li>
+                    <li><img src="Images/people05.png" alt="" /></li>
+                    <li><img src="Images/people06.png" alt="" /></li>
+                    <li><img src="Images/people11.png" alt="" /></li>
+                    <li><img src="Images/people13.png" alt="" /></li>
+                    <li><img src="Images/people14.png" alt="" /></li>
+                    <li><img src="Images/people15.png" alt="" /></li>
+                    <li><img src="Images/people17.png" alt="" /></li>
+                </ol>
+            </div>
+            <div class="AvatarFemale">
+                <ol>
+                    <li><img src="Images/people01.png" alt="" /></li>
+                    <li><img src="Images/people02.png" alt="" /></li>
+                    <li><img src="Images/people04.png" alt="" /></li>
+                    <li><img src="Images/people07.png" alt="" /></li>
+                    <li><img src="Images/people08.png" alt="" /></li>
+                    <li><img src="Images/people09.png" alt="" /></li>
+                    <li><img src="Images/people10.png" alt="" /></li>
+                    <li><img src="Images/people12.png" alt="" /></li>
+                    <li><img src="Images/people16.png" alt="" /></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!--JS code Section-->
+    <script src="JScode/main_trainers.js"></script>
+    <script src="JScode/indexspecific.js"></script>
+    <script src="Extras/rain.js"></script>
+    <script src="JScode/main.js"></script>
+
+</body>
+</html>

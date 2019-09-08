@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TsormanG Main</title>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <link href="CSSstyles/indexStyle.css" rel="stylesheet" />
+    <link href="CSSstyles/combinedTablesStyle.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="main-container">
+
+        <!--this contains the navigation bar on top-->
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    Paper School
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="trainersPERcourse.html">Trainers/Course</a>
+                <a href="studentsPERcourse.html">Students/Course</a>
+                <a href="assesPERcourse.html">Assignments/Course</a>
+                <a href="assesPERstudentPERcourse.html">Assignments/Students/Course</a>
+                <a>|</a>
+                <a href="index.html">Main</a>
+            </div>
+        </div>
+
+        <!--this contains the page title-->
+        <header class="nameTagCourses">
+            <h1>PAPER SCHOOL</h1>
+            <h3>Assignments / Course</h3>
+        </header>
+
+        <!--this contains the Main Parallax Image Theme for each page-->
+        <div id="parallax-container">
+            <div><img src="Images/CL_3.png" /></div>
+            <div><img src="Images/ass4.png" /></div>
+            <div><img src="Images/ass3.png" /></div>
+            <div><img src="Images/ass2.png" /></div>
+            <div><img src="Images/ass1.png" /></div>
+            <div>
+                <img class="image0" src="Images/ass0.png" />
+                <img class="image_1" src="Images/paper.jpg" />
+                <img class="image_2" src="Images/paper.jpg" />
+                <img class="image_3" src="Images/paper.jpg" />
+                <img class="image_4" src="Images/paper.jpg" />
+
+            </div>
+        </div>
+
+        <!--this contains the main table-->
+        <div class="table-users">
+            <div id="buttonBar">
+                <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Filter Assignments.." title="Ass/Course">
+                <button id="btnRefresh">Refresh Table</button>
+            </div>
+
+            <table id="myTable" cellspacing="0">
+
+                <caption> Table of Assignments/Course </caption>
+
+                <thead>
+                    <tr id="stable1">
+                        <th>ID</th>
+                        <th>Assignment Title</th>
+                        <th>Courses</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr id="1">
+                        <td>1</td>
+                        <td>CardBoard Cut</td>
+                        <td>
+                            <ol>
+                                <li>1</li>
+                                <br>
+                                <li>2</li>
+                            </ol>
+                        </td>
+                        <td><img class='btnDelete' src='Images/delete.png' /><img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr id="stable2">
+                        <th>ID</th>
+                        <th>Assignment Title</th>
+                        <th>Courses</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </div>
+
+    </div>
+
+    <!--this footer contains the second Navigation Bar-->
+    <footer>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    Basic Tables
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links" id="nav-links-below">
+                <a href="courses.html">Courses</a>
+                <a href="students.html">Students</a>
+                <a href="trainers.html">Trainers</a>
+                <a href="asses.html">Assignments</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--this is the MODAL for EDIT-->
+    <div id="ModalFormEdit">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Edit Form</h2>
+            </div>
+
+            <div class="modal-body">
+                <form action="/" method="get">
+
+                    <fieldset>
+                        <span id="rowID"> ID: </span>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <label class="container" for="course1">
+                            Course 1:
+                            <input type="checkbox" name="course" value="" id="course1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container" for="course2">
+                            Course 2:
+                            <input type="checkbox" name="course" value="" id="course2">
+                            <span class="checkmark"></span>
+                        </label>
+                    </fieldset>
+                    <input type="button" class="btnSaveEdit" name="Submit" value="">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--JS code Section-->
+    <script src="JScode/main.js"></script>
+    <script src="JScode/comb_assPERcou.js"></script>
+
+</body>
+</html>
