@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>TsormanG Main</title>
+    <title>Assignments per Courses</title>
     <script src="Scripts/jquery-3.4.1.min.js"></script>
     <link href="CSSstyles/indexStyle.css" rel="stylesheet" />
     <link href="CSSstyles/combinedTablesStyle.css" rel="stylesheet" />
@@ -71,7 +71,7 @@
                 <button id="btnRefresh">Refresh Table</button>
             </div>
 
-            <table id="myTable" cellspacing="0">
+            <table id="myTableC" cellspacing="0">
 
                 <caption> Table of Assignments/Course </caption>
 
@@ -111,72 +111,76 @@
             </table>
         </div>
 
-    </div>
+        <!--this is the MODAL for EDIT-->
+        <div id="ModalFormEditC">
+            <div class="modal-content">
 
-    <!--this footer contains the second Navigation Bar-->
-    <footer>
-        <div class="nav">
-            <input type="checkbox" id="nav-check">
-            <div class="nav-header">
-                <div class="nav-title">
-                    Basic Tables
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Edit Form</h2>
+                </div>
+
+                <div class="modal-body">
+                    <form action="/" method="get">
+
+                        <fieldset>
+                            <span id="rowID"> ID: </span>
+                        </fieldset>
+
+                        <fieldset>
+                            <label class="container" for="course1">
+                                Course 1:
+                                <input type="checkbox" name="course" value="" id="course1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container" for="course2">
+                                Course 2:
+                                <input type="checkbox" name="course" value="" id="course2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </fieldset>
+                        <input type="button" class="btnSaveEdit" name="Submit" value="">
+
+                    </form>
                 </div>
             </div>
-            <div class="nav-btn">
-                <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
-
-            <div class="nav-links" id="nav-links-below">
-                <a href="courses.html">Courses</a>
-                <a href="students.html">Students</a>
-                <a href="trainers.html">Trainers</a>
-                <a href="asses.html">Assignments</a>
-            </div>
         </div>
-    </footer>
 
-    <!--this is the MODAL for EDIT-->
-    <div id="ModalFormEdit">
-        <div class="modal-content">
+        <!--this footer contains the second Navigation Bar-->
+        <footer class="combinedT">
+            <div class="navf">
+                <input type="checkbox" id="nav-checkf">
+                <div class="nav-headerf">
+                </div>
+                <div class="nav-btnf">
+                    <label for="nav-checkf">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
 
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Edit Form</h2>
+                <div class="nav-linksf" id="nav-links-belowf">
+                    <a href="courses.html">Courses</a>
+                    <a href="students.html">Students</a>
+                    <a href="trainers.html">Trainers</a>
+                    <a href="asses.html">Assignments</a>
+                    <a>|</a>
+                    <a href="trainersPERcourse.html">Trainers/Course</a>
+                    <a href="studentsPERcourse.html">Students/Course</a>
+                    <a href="assesPERcourse.html">Assignments/Course</a>
+                    <a href="assesPERstudentPERcourse.html">Assignments/Students/Course</a>
+                </div>
             </div>
+        </footer>
 
-            <div class="modal-body">
-                <form action="/" method="get">
 
-                    <fieldset>
-                        <span id="rowID"> ID: </span>
-                    </fieldset>
-                    
-                    <fieldset>
-                        <label class="container" for="course1">
-                            Course 1:
-                            <input type="checkbox" name="course" value="" id="course1">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container" for="course2">
-                            Course 2:
-                            <input type="checkbox" name="course" value="" id="course2">
-                            <span class="checkmark"></span>
-                        </label>
-                    </fieldset>
-                    <input type="button" class="btnSaveEdit" name="Submit" value="">
-
-                </form>
-            </div>
-        </div>
     </div>
 
+    
+
     <!--JS code Section-->
-    <script src="JScode/main.js"></script>
-    <script src="JScode/comb_assPERcou.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>

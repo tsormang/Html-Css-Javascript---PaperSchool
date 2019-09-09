@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>TsormanG Main</title>
+    <title>Trainers per Courses</title>
     <script src="Scripts/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <link href="CSSstyles/indexStyle.css" rel="stylesheet" />
+    <link href="CSSstyles/combinedTablesStyle.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -68,18 +67,124 @@
             </div>
         </div>
 
+        <!--this contains the main table-->
+        <div class="table-users">
+            <div id="buttonBar">
+                <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Filter Trainers.." title="Train/Course">
+                <button id="btnRefresh">Refresh Table</button>
+            </div>
+
+            <table id="myTableT" cellspacing="0">
+
+                <caption> Table of Trainers/Course </caption>
+
+                <thead>
+                    <tr id="stable1">
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Courses</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr id="1">
+                        <td>1</td>
+                        <td>Daskalos</td>
+                        <td>Kathigitis</td>
+                        <td>
+                            <ol>
+                                <li>1</li>
+                                <br>
+                                <li>2</li>
+                            </ol>
+                        </td>
+                        <td><img class='btnDelete' src='Images/delete.png' /><img class='btnEdit' src='Images/edit.png' /></td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr id="stable2">
+                        <th>ID</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Courses</th>
+                        <th width="200">Actions</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </div>
+
+        <!--this is the MODAL for EDIT-->
+        <div id="ModalFormEditT">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Edit Form</h2>
+                </div>
+
+                <div class="modal-body">
+                    <form action="/" method="get">
+
+                        <fieldset>
+                            <span id="rowID"> ID: </span>
+                        </fieldset>
+
+                        <fieldset>
+                            <label class="container" for="course1">
+                                Course 1:
+                                <input type="checkbox" name="course" value="" id="course1">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container" for="course2">
+                                Course 2:
+                                <input type="checkbox" name="course" value="" id="course2">
+                                <span class="checkmark"></span>
+                            </label>
+                        </fieldset>
+                        <input type="button" class="btnSaveEdit" name="Submit" value="">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--this footer contains the second Navigation Bar-->
+        <footer class="combinedT">
+            <div class="navf">
+                <input type="checkbox" id="nav-checkf">
+                <div class="nav-headerf">
+                </div>
+                <div class="nav-btnf">
+                    <label for="nav-checkf">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="nav-linksf" id="nav-links-belowf">
+                    <a href="courses.html">Courses</a>
+                    <a href="students.html">Students</a>
+                    <a href="trainers.html">Trainers</a>
+                    <a href="asses.html">Assignments</a>
+                    <a>|</a>
+                    <a href="trainersPERcourse.html">Trainers/Course</a>
+                    <a href="studentsPERcourse.html">Students/Course</a>
+                    <a href="assesPERcourse.html">Assignments/Course</a>
+                    <a href="assesPERstudentPERcourse.html">Assignments/Students/Course</a>
+                </div>
+            </div>
+        </footer>
+
 
     </div>
 
-    <!--this footer might or not have an special effect-->
-    <footer>
-        <div>
-            <p id="footerClick"> Nothing here as well... </p>
-        </div>
-    </footer>
-
     <!--JS code Section-->
-    <script src="JScode/main.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>

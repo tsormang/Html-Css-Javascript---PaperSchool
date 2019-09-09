@@ -51,10 +51,10 @@ $(document).ready(function () {
         $("footer").find("#footerClick").text("Christmas is here!!!");
         $(init);
 
-        var snowpile1 = $("#snowpile1")
-        var snowpile2 = $("#snowpile2")
-        var snowpile3 = $("#snowpile3")
-        var snowpile4 = $("#snowpile4")
+        var snowpile1 = $("#snowpile1 img")
+        var snowpile2 = $("#snowpile2 img")
+        var snowpile3 = $("#snowpile3 img")
+        var snowpile4 = $("#snowpile4 img")
 
         snowpile1.animate({ bottom: '0px' }, 14000);
         snowpile2.animate({ bottom: '-40px' }, 13000);

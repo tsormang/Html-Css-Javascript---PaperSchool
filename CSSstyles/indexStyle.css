@@ -679,6 +679,34 @@ caption {
     font-size: 18px;
 }
 
+#myTableC {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTableS {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTableT {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTableASC {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
 tbody {
     border-bottom: 1px solid #2b686e;
     width: 100%;
@@ -803,12 +831,12 @@ tbody tr td .picFrame img{
 footer {
     display: block;
     width: 100%;
+    max-width:1400px;
     height: 40px;
     background-image: url('../Images/footerImage.png');
     background-position: left top, center top;
     background-repeat: no-repeat;
     background-size: auto;
-    margin: 0 auto;
     position: fixed;
     bottom: 0px;
 }
@@ -1006,3 +1034,31 @@ footer {
 
 
 /*#endregion TIP*/
+
+/*#region VALIDATION*/
+
+/* JSFormValidation.css */
+.required { /* Marker for required fields */
+    color: red;
+}
+
+.errorMsg { /* for error messages */
+    color: red;
+}
+
+.errorBox { /* for the error input text fields */
+    border: 2px solid red;
+}
+
+table {
+    border: 0;
+}
+
+td {
+    margin: 0;
+    padding: 3px 10px;
+}
+
+
+
+/*#endregion VALIDATION*/

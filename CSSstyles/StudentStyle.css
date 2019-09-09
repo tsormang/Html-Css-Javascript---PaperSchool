@@ -415,3 +415,38 @@ ol li img {
     }
 
 /*#endregion CAROUSEL*/
+
+/*#region SNOW RISING*/
+
+
+
+#snowpile1 img {
+    width: 100%;
+    max-width: 1400px;
+    position: absolute;
+    bottom: -700px;
+}
+
+#snowpile2 img {
+    width: 100%;
+    max-width: 1400px;
+    position: absolute;
+    bottom: -700px;
+}
+
+#snowpile3 img {
+    width: 100%;
+    max-width: 1400px;
+    position: absolute;
+    bottom: -700px;
+}
+
+#snowpile4 img {
+    width: 100%;
+    max-width: 1400px;
+    position: absolute;
+    bottom: -700px;
+}
+
+
+/*#endregion  SNOW RISING*/

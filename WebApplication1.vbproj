@@ -169,10 +169,8 @@
     <Content Include="courses.html" />
     <Content Include="index.html" />
     <Content Include="CSSstyles\indexStyle.css" />
-    <Content Include="JScode\comb_assPERcou.js" />
-    <Content Include="JScode\formvalidation.js" />
+    <Content Include="indexCombinedTables.html" />
     <Content Include="JScode\indexspecific.js" />
-    <Content Include="JScode\main.js" />
     <Content Include="JScode\main_asses.js" />
     <Content Include="JScode\main_courses.js" />
     <Content Include="JScode\main_students.js" />
@@ -180,6 +178,7 @@
     <Content Include="Extras\mystery.js" />
     <Content Include="Extras\Pandora.js" />
     <Content Include="Extras\PandorasBox.html" />
+    <Content Include="main.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
