@@ -149,27 +149,27 @@
             </div>
 
             <div class="modal-body">
-                <form action="/" method="get">
+                <form id="myForm" method="get" action="" target="_self" onsubmit="">
 
                     <fieldset>
                         <label for="Title">
                             Title
-                            <input type="text" name="Title" value="" id="Title" placeholder="Assignment Title" required>
+                            <input type="text" name="Title" value="" id="Title" placeholder="Assignment Title">
                         </label>
                         <br>
                         <label for="Description">
                             Description
-                            <input type="text" name="Description" value="" id="Description" placeholder="Assignment Description" required>
+                            <input type="text" name="Description" value="" id="Description" placeholder="Assignment Description">
                         </label>
                         <br>
                         <label for="Subscription">
                             Subscription Date
-                            <input type="date" name="Subscription" value="" id="Subscription" placeholder="Subscription Date" required>
+                            <input type="date" name="Subscription" value="" id="Subscription" placeholder="Subscription Date">
                         </label>
                     </fieldset>
 
                     <fieldset>
-                        <input id="Submitbtn" name="Submit" value="Submit" type="submit">
+                        <input id="submitbtn" name="Submit" value="Submit" type="submit" class="submit">
                     </fieldset>
 
                 </form>
@@ -195,12 +195,12 @@
                     <fieldset>
                         <label for="currTitle">
                             Title
-                            <input type="text" name="Title" value="" id="currTitle" placeholder="Assignment Title" required>
+                            <input type="text" name="Title" value="" id="currTitle" placeholder="Assignment Title" minlength="4" required>
                         </label>
                         <br>
                         <label for="currDescription">
                             Description
-                            <input type="text" name="Description" value="" id="currDescription" placeholder="Assignment Description" required>
+                            <input type="text" name="Description" value="" id="currDescription" placeholder="Assignment Description" minlength="4" required>
                         </label>
                         <br>
                         <label for="currSubscription">

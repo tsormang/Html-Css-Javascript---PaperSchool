@@ -50,6 +50,7 @@ C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\bin\roslyn\VBCSCo
 C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.vbprojAssemblyReference.cache
 C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.Resources.resources
 C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.vbproj.GenerateResource.cache
 C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.vbproj.CoreCompileInputs.cache
@@ -57,4 +58,3 @@ C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\obj\Debug\WebAppl
 C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.xml
 C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
-C:\Users\Giger_PC\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.vbprojAssemblyReference.cache

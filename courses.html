@@ -149,38 +149,38 @@
             </div>
 
             <div class="modal-body">
-                <form id="form" method="post" action="">
+                <form id="myForm" method="get" action="" target="_self" onsubmit="">
 
                     <fieldset>
                         <label for="Title">
                             Title
-                            <input type="text" name="Title" value="" id="Title" placeholder="Course Type" required autofocus>
+                            <input type="text" name="Title" value="" id="Title" placeholder="Course Type">
                         </label>
                         <br>
                         <label for="Stream">
                             Stream
-                            <input type="text" name="Stream" value="" id="Stream" placeholder="Course Stream" required autofocus>
+                            <input type="text" name="Stream" value="" id="Stream" placeholder="Course Stream">
                         </label>
                         <br>
                         <label for="Type">
                             Type
-                            <input type="text" name="Type" value="" id="Type" placeholder="Course Type" required autofocus>
+                            <input type="text" name="Type" value="" id="Type" placeholder="Course Type">
                         </label>
                         <br>
                         <label for="StartDate">
                             Starting Date
-                            <input type="date" name="StartDate" value="" id="StartDate" placeholder="Starting date" required>
+                            <input type="date" name="StartDate" value="" id="StartDate" placeholder="Starting date">
                         </label>
                         <br>
                         <label for="EndDate">
                             Ending Date
-                            <input type="date" name="EndDate" value="" id="EndDate" placeholder="Ending Date" required>
+                            <input type="date" name="EndDate" value="" id="EndDate" placeholder="Ending Date">
                         </label>
 
                     </fieldset>
 
                     <fieldset>
-                        <input id="Submitbtn" name="Submit" value="Submit" type="submit" class="submit">
+                        <input id="submitbtn" name="Submit" value="Submit" type="submit" class="submit">
                     </fieldset>
 
                 </form>
@@ -198,40 +198,39 @@
             </div>
 
             <div class="modal-body">
-                <form action="/" method="get">
-
+                <form id="myFormEdit" method="get" action="" target="_self" onsubmit="">
                     <fieldset>
                         <span id="rowID"> ID: </span>
                     </fieldset>
-
-
                     <fieldset>
                         <label for="currTitle">
                             Title
-                            <input type="text" value="" id="currTitle" required autofocus>
+                            <input type="text" value="" id="currTitle">
                         </label>
                         <br>
                         <label for="currStream">
                             Stream
-                            <input type="text" value="" id="currStream" required autofocus>
+                            <input type="text" value="" id="currStream">
                         </label>
                         <br>
                         <label for="currType">
                             Type
-                            <input type="text" value="" id="currType" required autofocus>
+                            <input type="text" value="" id="currType">
                         </label>
                         <br>
                         <label for="currStartDate">
                             Starting Date
-                            <input type="date" value="" id="currStartDate datepicker" required>
+                            <input type="date" value="" id="currStartDate datepicker">
                         </label>
                         <br>
                         <label for="currEndDate">
                             Ending Date
-                            <input type="date" value="" id="currEndDate datepicker" required>
+                            <input type="date" value="" id="currEndDate datepicker">
                         </label>
                     </fieldset>
-                    <input type="button" class="btnSaveEdit" name="Submit" value="">
+                    <fieldset>
+                        <input id="submitbtn" name="Submit" value="Submit" type="submit" class="submit">
+                    </fieldset>
 
                 </form>
             </div>
@@ -241,7 +240,6 @@
     <!--JS code Section-->
     <script src="JScode/main_courses.js"></script>
     <script src="main.js"></script>
-    <script src="JScode/formvalidation.js"></script>
 
 </body>
 </html>

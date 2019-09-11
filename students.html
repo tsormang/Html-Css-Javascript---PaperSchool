@@ -154,57 +154,8 @@
                 <span class="close">&times;</span>
                 <h2>Input Form</h2>
             </div>
-
             <div class="modal-body">
-                <form action="/" method="get">
 
-
-                    <fieldset>
-                        <label class="container" for="Mrs">
-                            Mrs
-                            <input type="radio" name="sex" value="Mrs" id="Mrs">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="container" for="Mr">
-                            Mr
-                            <input type="radio" name="sex" value="Mr" id="Mr">
-                            <span class="checkmark"></span>
-                        </label>
-
-                    </fieldset>
-                    <fieldset>
-                        <div id="leftSide">
-                            <img id="toBeChanged" src='Images/people01.png' value="Images/people01.png" alt="Avatar" />
-                        </div>
-
-                        <div id="rightSide">
-                            <label for="FirstName">
-                                First Name
-                                <input type="text" name="FirstName" value="" id="FirstName" placeholder="First Name" required>
-                            </label>
-                            <br>
-                            <label for="LastName">
-                                Last Name
-                                <input type="text" name="LastName" value="" id="LastName" placeholder="Last Name" required>
-                            </label>
-                            <br>
-                            <label for="BirthDate">
-                                Birth Date
-                                <input type="date" name="BirthDate" value="" id="BirthDate" placeholder="Birth Date" required>
-                            </label>
-                            <br>
-                            <label for="TuitionFees">
-                                Tuition Fees
-                                <input type="text" name="TuitionFees" value="" id="TuitionFees" placeholder="Tuition Fees" required>
-                            </label>
-                            <br>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <input id="Submitbtn" name="Submit" value="Submit" type="submit">
-                    </fieldset>
-
-                </form>
             </div>
         </div>
     </div>
@@ -228,12 +179,12 @@
                     <fieldset>
                         <label for="currFirstName">
                             First Name
-                            <input type="text" name="FirstName" value="" id="currFirstName" placeholder="First Name" required>
+                            <input type="text" name="FirstName" value="" id="currFirstName" placeholder="First Name" minlength="4" required>
                         </label>
                         <br>
                         <label for="currLastName">
                             Last Name
-                            <input type="text" name="LastName" value="" id="currLastName" placeholder="Last Name" required>
+                            <input type="text" name="LastName" value="" id="currLastName" placeholder="Last Name" minlength="4" required>
                         </label>
                         <br>
                         <label for="currBirthDate">

@@ -156,9 +156,7 @@
             </div>
 
             <div class="modal-body">
-                <form action="/" method="get">
-
-
+                <form id="myForm" method="get" action="" target="_self" onsubmit="">
                     <fieldset>
                         <label class="container" for="Mrs">
                             Mrs
@@ -179,17 +177,17 @@
                         <div id="rightSide">
                             <label for="FirstName">
                                 First Name
-                                <input type="text" name="FirstName" value="" id="FirstName" placeholder="First Name" required>
+                                <input type="text" name="FirstName" value="" id="FirstName" placeholder="First Name">
                             </label>
                             <br>
                             <label for="LastName">
                                 Last Name
-                                <input type="text" name="LastName" value="" id="LastName" placeholder="Last Name" required>
+                                <input type="text" name="LastName" value="" id="LastName" placeholder="Last Name">
                             </label>
                             <br>
                             <label for="Subject">
                                 Subject
-                                <input type="text" name="Subject" value="" id="Subject" placeholder="Subject" required>
+                                <input type="text" name="Subject" value="" id="Subject" placeholder="Subject">
                             </label>
                             <br>
                         </div>
@@ -197,7 +195,7 @@
                     </fieldset>
 
                     <fieldset>
-                        <input id="Submitbtn" name="Submit" value="Submit" type="submit">
+                        <input id="submitbtn" name="Submit" value="Submit" type="submit" class="submit">
                     </fieldset>
 
                 </form>
